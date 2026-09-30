@@ -1,0 +1,2466 @@
+/* =========================================================
+   E'S NETWORK — PREMIUM RESPONSIVE TECH WEBSITE
+   Mobile + Tablet + Desktop
+   ========================================================= */
+
+:root {
+  color-scheme: light;
+
+  --ink: #172033;
+  --muted: #647087;
+  --paper: #f5f7fb;
+  --surface: #ffffff;
+  --line: #e2e7f0;
+
+  --blue: #315bea;
+  --blue-dark: #2446c7;
+  --blue-soft: #eef3ff;
+  --purple: #7656e8;
+
+  --radius: 18px;
+  --shadow: 0 12px 32px rgb(23 32 51 / 8%);
+  --shadow-lg: 0 22px 55px rgb(23 32 51 / 13%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+iframe {
+  border: 0;
+}
+
+a {
+  color: var(--blue);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  color: var(--blue-dark);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 76px;
+}
+
+.section h2,
+.phone-hero h1 {
+  margin: 0 0 16px;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.section-intro {
+  max-width: 720px;
+  margin: 0 0 30px;
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgb(255 255 255 / 94%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.site-header.scrolled {
+  background: rgb(255 255 255 / 97%);
+  box-shadow: 0 8px 28px rgb(23 32 51 / 8%);
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+
+
+/* Brand */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+
+  color: var(--ink) !important;
+  font-size: 1.12rem !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  text-decoration: none !important;
+}
+
+.brand:hover,
+.brand:focus,
+.brand:visited,
+.brand:active {
+  color: var(--ink) !important;
+  text-decoration: none !important;
+}
+
+.brand span {
+  color: var(--blue);
+}
+
+/* Desktop navigation */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.nav-links a {
+  position: relative;
+
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+
+  padding: 7px 11px;
+  border-radius: 9px;
+
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.nav-links a::after {
+  position: absolute;
+  right: 11px;
+  bottom: 3px;
+  left: 11px;
+
+  height: 2px;
+  border-radius: 999px;
+
+  background: var(--blue);
+  content: "";
+
+  opacity: 0;
+  transform: scaleX(0.4);
+
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.nav-links a:hover {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.nav-links a:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid var(--line);
+  border-radius: 10px;
+
+  background: var(--surface);
+  color: var(--ink);
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.menu-toggle:hover {
+  background: var(--blue-soft);
+  border-color: #bfd0ff;
+  transform: translateY(-1px);
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 19px;
+  height: 2px;
+
+  border-radius: 999px;
+  background: currentColor;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   FULL-WIDTH HERO — E'S NETWORK
+   ========================================================= */
+
+.phone-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(5 13 35 / 88%) 0%,
+      rgb(8 20 48 / 76%) 42%,
+      rgb(10 27 61 / 48%) 72%,
+      rgb(10 27 61 / 28%) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3RYHpcdJyxzqnk1cGE_SWYZa8-LSknum8F4hHS5UpQw&s=10");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #fff;
+}
+
+/* Premium blue glow */
+.phone-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 78% 30%,
+      rgb(49 91 234 / 30%),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgb(118 86 232 / 18%),
+      transparent 34%
+    );
+
+  content: "";
+  pointer-events: none;
+}
+
+/* Subtle cinematic overlay */
+.phone-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgb(4 10 25 / 18%),
+      transparent 45%,
+      rgb(4 10 25 / 35%)
+    );
+
+  content: "";
+  pointer-events: none;
+}
+
+/* Hero container */
+.phone-hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  width: 100%;
+  min-height: 680px;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-block: clamp(70px, 10vw, 120px);
+}
+
+/* Text area */
+.phone-hero-content > div {
+  width: min(720px, 100%);
+}
+
+/* Eyebrow */
+.phone-hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin: 0 0 18px;
+  padding: 7px 13px;
+
+  border: 1px solid rgb(185 200 255 / 28%);
+  border-radius: 999px;
+
+  background: rgb(255 255 255 / 9%);
+  color: #cbd7ff;
+
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hero title */
+.phone-hero h1 {
+  max-width: 720px;
+
+  margin: 0 0 22px;
+
+  color: #fff;
+
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 850;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+
+  text-wrap: balance;
+}
+
+/* Blue highlighted words if you add a span */
+.phone-hero h1 span {
+  color: #8da8ff;
+}
+
+/* Hero paragraph */
+.phone-hero p:not(.eyebrow) {
+  max-width: 610px;
+
+  margin: 0 0 32px;
+
+  color: rgb(228 235 255 / 88%);
+
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.7;
+}
+
+/* Hero button */
+.phone-hero .button {
+  min-height: 52px;
+
+  padding: 13px 24px;
+
+  background: #315bea;
+  box-shadow:
+    0 12px 30px rgb(49 91 234 / 30%);
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.phone-hero .button:hover {
+  transform: translateY(-3px);
+
+  background: #2446c7;
+
+  box-shadow:
+    0 16px 36px rgb(49 91 234 / 40%);
+}
+
+/* Remove the old separate image card */
+.phone-hero-image {
+  display: none !important;
+}
+
+
+
+/* =========================================================
+   E'S NETWORK — PREMIUM FULL HERO
+   ========================================================= */
+
+.phone-hero {
+  position: relative;
+  isolation: isolate;
+
+  min-height: 700px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgb(4 10 25 / 91%) 0%,
+      rgb(7 18 43 / 82%) 35%,
+      rgb(10 28 64 / 58%) 65%,
+      rgb(10 28 64 / 30%) 100%
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3RYHpcdJyxzqnk1cGE_SWYZa8-LSknum8F4hHS5UpQw&s=10");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   BLUE CINEMATIC GLOW
+   ========================================================= */
+
+.phone-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  content: "";
+
+  background:
+    radial-gradient(
+      circle at 82% 25%,
+      rgb(49 91 234 / 34%),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 25% 90%,
+      rgb(118 86 232 / 20%),
+      transparent 36%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DARK BOTTOM DEPTH
+   ========================================================= */
+
+.phone-hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  content: "";
+
+  background:
+    linear-gradient(
+      180deg,
+      rgb(0 0 0 / 5%) 0%,
+      transparent 50%,
+      rgb(0 0 0 / 32%) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTAINER
+   ========================================================= */
+
+.phone-hero-content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 700px;
+
+  padding-block: 90px;
+}
+
+
+/* =========================================================
+   HERO COPY
+   ========================================================= */
+
+.hero-copy {
+  width: min(780px, 100%);
+}
+
+
+/* =========================================================
+   E'S NETWORK BRAND
+   NO PILL
+   NO ROUNDED CONTAINER
+   ========================================================= */
+
+.hero-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 34px;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   ES LOGO
+   ========================================================= */
+
+.hero-brand-logo {
+  display: block;
+
+  width: 82px;
+  height: 82px;
+
+  flex: 0 0 82px;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  padding: 7px;
+
+  box-shadow:
+    0 14px 38px rgb(0 0 0 / 32%);
+
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+
+.hero-brand-logo:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  box-shadow:
+    0 18px 45px rgb(0 0 0 / 42%);
+}
+
+
+/* =========================================================
+   BRAND NAME
+   ========================================================= */
+
+.hero-brand-name {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* BIG E'S NETWORK */
+
+.hero-brand-name strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: clamp(2rem, 5vw, 3.6rem);
+
+  font-weight: 900;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+
+  text-shadow:
+    0 5px 25px rgb(0 0 0 / 28%);
+}
+
+
+/* TECH IN NAIRA */
+
+.hero-brand-name span {
+  display: block;
+
+  margin-top: 9px;
+
+  color: #aebfff;
+
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+
+  font-weight: 750;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN HERO TITLE
+   ========================================================= */
+
+.phone-hero h1 {
+  max-width: 760px;
+
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: clamp(3.3rem, 7vw, 6.2rem);
+
+  font-weight: 900;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.065em;
+
+  text-wrap: balance;
+
+  text-shadow:
+    0 8px 35px rgb(0 0 0 / 28%);
+}
+
+
+/* Galaxy S26 Ultra */
+
+.phone-hero h1 span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #91aaff;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #a7baff 45%,
+      #718fff 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+  max-width: 620px;
+
+  margin: 0 0 34px;
+
+  color: rgb(230 236 255 / 88%);
+
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+   ========================================================= */
+
+.hero-button {
+  min-height: 54px;
+
+  padding: 14px 27px;
+
+  border: 1px solid rgb(255 255 255 / 12%);
+
+  background:
+    linear-gradient(
+      135deg,
+      #315bea,
+      #536fe9
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 14px 35px rgb(49 91 234 / 35%);
+}
+
+
+.hero-button:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #2446c7,
+      #465fd2
+    );
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 42px rgb(49 91 234 / 45%);
+}
+
+
+/* =========================================================
+   REMOVE OLD HERO IMAGE CARD
+   ========================================================= */
+
+.phone-hero-image {
+  display: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .phone-hero {
+    min-height: 650px;
+
+    background-position: center;
+  }
+
+  .phone-hero-content {
+    min-height: 650px;
+
+    padding-block: 80px;
+  }
+
+  .hero-copy {
+    max-width: 700px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .phone-hero {
+    min-height: 620px;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgb(4 10 25 / 92%) 0%,
+        rgb(7 18 43 / 82%) 100%
+      ),
+      url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3RYHpcdJyxzqnk1cGE_SWYZa8-LSknum8F4hHS5UpQw&s=10");
+
+    background-position: 60% center;
+  }
+
+  .phone-hero-content {
+    min-height: 620px;
+
+    padding-block: 70px;
+  }
+
+  .hero-brand {
+    gap: 14px;
+
+    margin-bottom: 30px;
+  }
+
+  .hero-brand-logo {
+    width: 68px;
+    height: 68px;
+
+    flex-basis: 68px;
+  }
+
+  .hero-brand-name strong {
+    font-size: 2.2rem;
+  }
+
+  .hero-brand-name span {
+    font-size: 0.78rem;
+  }
+
+  .phone-hero h1 {
+    font-size: clamp(2.8rem, 11vw, 4.4rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .phone-hero {
+    min-height: 590px;
+
+    background-position: 63% center;
+  }
+
+  .phone-hero-content {
+    min-height: 590px;
+
+    padding-block: 58px;
+  }
+
+  .hero-brand-logo {
+    width: 58px;
+    height: 58px;
+
+    flex-basis: 58px;
+  }
+
+  .hero-brand {
+    gap: 12px;
+  }
+
+  .hero-brand-name strong {
+    font-size: 1.85rem;
+  }
+
+  .hero-brand-name span {
+    margin-top: 6px;
+
+    font-size: 0.68rem;
+  }
+
+  .phone-hero h1 {
+    font-size: 2.55rem;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+}
+/* =========================================================
+   HERO RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .phone-hero,
+  .phone-hero-content {
+    min-height: 620px;
+  }
+
+  .phone-hero {
+    background-position: center;
+  }
+
+  .phone-hero h1 {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 760px) {
+
+  .phone-hero,
+  .phone-hero-content {
+    min-height: 600px;
+  }
+
+  .phone-hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgb(5 13 35 / 91%) 0%,
+        rgb(8 20 48 / 78%) 100%
+      ),
+      url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3RYHpcdJyxzqnk1cGE_SWYZa8-LSknum8F4hHS5UpQw&s=10");
+
+    background-position: center;
+  }
+
+  .phone-hero-content {
+    padding-block: 70px;
+  }
+
+  .phone-hero h1 {
+    font-size: clamp(2.8rem, 11vw, 4.5rem);
+  }
+
+  .phone-hero p:not(.eyebrow) {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .phone-hero,
+  .phone-hero-content {
+    min-height: 570px;
+  }
+
+  .phone-hero {
+    background-position: 60% center;
+  }
+
+  .phone-hero-content {
+    padding-block: 60px;
+  }
+
+  .phone-hero h1 {
+    font-size: clamp(2.45rem, 13vw, 3.7rem);
+    letter-spacing: -0.045em;
+  }
+
+  .phone-hero p:not(.eyebrow) {
+    max-width: 500px;
+
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .phone-hero .button {
+    width: auto;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .phone-hero,
+  .phone-hero-content {
+    min-height: 540px;
+  }
+
+  .phone-hero {
+    background-position: 62% center;
+  }
+
+  .phone-hero-content {
+    padding-block: 52px;
+  }
+
+  .phone-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  .phone-hero .eyebrow {
+    font-size: 0.68rem;
+  }
+
+  .phone-hero .button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button,
+button.button {
+  display: inline-flex;
+
+  min-height: 46px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 11px 20px;
+
+  border: 0;
+  border-radius: 999px;
+
+  background: var(--blue);
+  color: #fff;
+
+  font-weight: 750;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.button:hover,
+button.button:hover {
+  transform: translateY(-1px);
+
+  background: var(--blue-dark);
+  color: #fff;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.card {
+  min-width: 0;
+
+  padding: 24px;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow);
+
+  overflow-wrap: anywhere;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.card h4 {
+  margin: 22px 0 8px;
+
+  font-size: 1rem;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.card ul {
+  padding-left: 1.25rem;
+}
+
+.card li + li {
+  margin-top: 8px;
+}
+
+/* =========================================================
+   PHONE SEARCH
+   ========================================================= */
+
+.phone-search-form {
+  display: grid;
+
+  grid-template-columns:
+    minmax(180px, 1.2fr)
+    minmax(160px, 0.8fr)
+    auto;
+
+  align-items: end;
+
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+.phone-search-form label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.phone-search-form input {
+  width: 100%;
+
+  min-height: 48px;
+
+  padding: 10px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  background: var(--surface);
+  color: var(--ink);
+
+  outline: none;
+
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.phone-search-form input:focus {
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 4px rgb(49 91 234 / 10%);
+}
+
+/* =========================================================
+   OS + STORE LOGOS
+   ========================================================= */
+
+.os-logo,
+.store-logo {
+  display: inline-flex;
+
+  min-height: 62px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  text-decoration: none;
+}
+
+.os-logo img {
+  display: block;
+
+  width: 112px;
+  max-height: 56px;
+
+  object-fit: contain;
+}
+
+.os-wordmark svg,
+.store-logo svg {
+  display: block;
+
+  width: 150px;
+  height: auto;
+}
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+.device-image {
+  display: block;
+
+  width: 100%;
+  height: 210px;
+
+  margin-bottom: 16px;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+.tech-trends {
+  display: grid;
+  gap: 18px;
+}
+
+.trend-card {
+  display: grid;
+
+  grid-template-columns:
+    minmax(190px, 280px)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 24px;
+}
+
+.trend-card img {
+  display: block;
+
+  width: 100%;
+  height: 180px;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+   PHONE COMPARISON TABLE — DESKTOP
+   ========================================================= */
+
+.table-wrapper {
+  width: 100%;
+  max-width: 100%;
+
+  margin-bottom: 36px;
+
+  border: 1px solid var(--line);
+  border-radius: 16px;
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrapper table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  padding: 16px 18px;
+
+  border-bottom: 1px solid var(--line);
+
+  text-align: left;
+  vertical-align: top;
+
+  overflow-wrap: anywhere;
+}
+
+.table-wrapper thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  background: #eef2ff;
+  color: #273a78;
+
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.table-wrapper thead th:first-child {
+  border-top-left-radius: 15px;
+}
+
+.table-wrapper thead th:last-child {
+  border-top-right-radius: 15px;
+}
+
+.table-wrapper tbody th {
+  width: 150px;
+
+  background: #fafbfe;
+
+  font-weight: 750;
+}
+
+.table-wrapper tbody tr:last-child th,
+.table-wrapper tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* =========================================================
+   POLL
+   ========================================================= */
+
+fieldset {
+  margin: 0 0 20px;
+
+  padding: 20px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: var(--surface);
+}
+
+legend {
+  padding-inline: 8px;
+
+  font-weight: 750;
+}
+
+fieldset label {
+  display: block;
+
+  padding-block: 7px;
+
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  accent-color: var(--blue);
+}
+
+#phone-vote-status {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+#whatsapp-channel .card {
+  padding: clamp(28px, 5vw, 48px);
+
+  background:
+    linear-gradient(
+      125deg,
+      #eef3ff,
+      #fff
+    );
+}
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.newsletter {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: clamp(28px, 5vw, 48px);
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow);
+}
+
+.signup-form {
+  display: flex;
+
+  gap: 10px;
+}
+
+.signup-form input {
+  flex: 1;
+
+  min-width: 0;
+  min-height: 46px;
+
+  padding: 10px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  background: #fff;
+}
+
+.signup-form input:focus {
+  outline: none;
+
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 4px rgb(49 91 234 / 10%);
+}
+
+/* =========================================================
+   XIAOMI VIDEO
+   ========================================================= */
+
+.xiaomi-reel {
+  display: block;
+
+  width: 100%;
+  max-width: 420px;
+  height: 520px;
+
+  margin-inline: auto;
+
+  border-radius: 16px;
+
+  background: #000;
+}
+.site-footer {
+  padding: 48px 0 18px;
+  background: #10182b;
+  color: #d4dcf1;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 36px;
+}
+
+.site-footer h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.site-footer nav a {
+  display: block;
+  width: fit-content;
+  margin: 7px 0;
+  color: #d4dcf1;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #b9c8ff;
+}
+
+.footer-logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: #b9c8ff;
+}
+
+.footer-brand p {
+  max-width: 280px;
+  color: #aebbd2;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid #ffffff24;
+  color: #aebbd2;
+  font-size: 0.9rem;
+}
+
+.footer-bottom a {
+  color: #d4dcf1;
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   TABLET — 1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .nav-links a {
+    padding-inline: 8px;
+
+    font-size: 0.78rem;
+  }
+
+  .phone-hero-content {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(280px, 0.8fr);
+
+    gap: 36px;
+  }
+
+  .cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .phone-search-form {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .phone-search-form .button {
+    grid-column: 1 / -1;
+
+    width: fit-content;
+  }
+}
+
+/* =========================================================
+   TABLET / MOBILE NAV — 760px
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .nav {
+    min-height: 58px;
+  }
+
+  .brand {
+    font-size: 1.05rem !important;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+    left: 0;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 4px;
+
+    padding: 8px;
+
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    background: rgb(255 255 255 / 98%);
+
+    box-shadow: 0 18px 45px rgb(23 32 51 / 14%);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform:
+      translateY(-8px)
+      scale(0.98);
+
+    transform-origin: top;
+
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      visibility 180ms ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  .nav-links a {
+    width: 100%;
+    min-height: 44px;
+
+    justify-content: flex-start;
+
+    padding: 10px 13px;
+
+    border-radius: 9px;
+
+    font-size: 0.9rem;
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover {
+    background: var(--blue-soft);
+  }
+
+  .phone-hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .phone-hero h1 {
+    max-width: 760px;
+  }
+
+  .phone-hero-image {
+    max-width: 720px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .newsletter {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   MOBILE — 640px
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .section {
+    padding-block: 54px;
+  }
+
+  .section h2 {
+    font-size: clamp(1.85rem, 9vw, 2.5rem);
+  }
+
+  .phone-hero {
+    padding-block: 58px 64px;
+  }
+
+  .phone-hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3.7rem);
+  }
+
+  .phone-hero p:not(.eyebrow) {
+    font-size: 1.05rem;
+  }
+
+  .phone-hero-image img {
+    min-height: 220px;
+    max-height: 320px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  /* Search form becomes a clean vertical form */
+
+  .phone-search-form {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .phone-search-form .button {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+  /* Trend cards */
+
+  .trend-card {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .trend-card img {
+    height: 210px;
+  }
+
+  /* Newsletter */
+
+  .signup-form {
+    flex-direction: column;
+  }
+
+  .signup-form input,
+  .signup-form .button {
+    width: 100%;
+  }
+
+  /* Footer */
+
+  .footer-content {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  /* =======================================================
+     PHONE COMPARISON TABLE — MOBILE CARD MODE
+     ======================================================= */
+
+  .table-wrapper {
+    border: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    overflow: visible;
+  }
+
+  .table-wrapper table {
+    width: 100%;
+
+    min-width: 0;
+
+    border-collapse: separate;
+    border-spacing: 0 14px;
+  }
+
+  .table-wrapper thead {
+    display: none;
+  }
+
+  .table-wrapper tbody,
+  .table-wrapper tr,
+  .table-wrapper th,
+  .table-wrapper td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-wrapper tbody tr {
+    overflow: hidden;
+
+    margin-bottom: 14px;
+
+    border: 1px solid var(--line);
+    border-radius: 16px;
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow);
+  }
+
+  .table-wrapper tbody th {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+
+    background:
+      linear-gradient(
+        135deg,
+        #eef2ff,
+        #f7f8ff
+      );
+
+    color: #273a78;
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    letter-spacing: 0.04em;
+
+    text-transform: uppercase;
+  }
+
+  .table-wrapper tbody td {
+    position: relative;
+
+    padding: 15px 16px 15px 126px;
+
+    min-height: 62px;
+
+    border: 0;
+    border-bottom: 1px solid #edf0f5;
+
+    font-size: 0.94rem;
+
+    overflow-wrap: anywhere;
+  }
+
+  .table-wrapper tbody td:last-child {
+    border-bottom: 0;
+  }
+
+  .table-wrapper tbody td::before {
+    position: absolute;
+
+    top: 15px;
+    left: 16px;
+
+    width: 96px;
+
+    color: var(--muted);
+
+    font-size: 0.72rem;
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.04em;
+  }
+
+  /*
+     Labels correspond to:
+     Apple / Samsung / Google
+  */
+
+  .table-wrapper tbody td:nth-of-type(1)::before {
+    content: "iPhone 17 Pro Max";
+  }
+
+  .table-wrapper tbody td:nth-of-type(2)::before {
+    content: "Galaxy S26 Ultra";
+  }
+
+  .table-wrapper tbody td:nth-of-type(3)::before {
+    content: "Pixel 10 Pro";
+  }
+
+  /* Xiaomi video */
+
+  .xiaomi-reel {
+    height: 460px;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES — 420px
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .nav {
+    min-height: 56px;
+  }
+
+  .brand {
+    font-size: 1rem !important;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    left: 0;
+    right: 0;
+  }
+
+  .phone-hero {
+    padding-block: 48px 54px;
+  }
+
+  .phone-hero h1 {
+    font-size: clamp(2.15rem, 13vw, 3rem);
+  }
+
+  .phone-hero-image {
+    border-radius: 18px;
+  }
+
+  .phone-hero-image img {
+    min-height: 190px;
+    max-height: 260px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .section {
+    padding-block: 46px;
+  }
+
+  .table-wrapper tbody td {
+    padding-left: 112px;
+  }
+
+  .table-wrapper tbody td::before {
+    left: 12px;
+    width: 88px;
+  }
+
+  .table-wrapper tbody th {
+    padding-inline: 13px;
+  }
+
+  .xiaomi-reel {
+    height: 400px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES — 360px
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  .brand {
+    font-size: 0.94rem !important;
+  }
+
+  .phone-hero h1 {
+    font-size: 2.05rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .table-wrapper tbody td {
+    padding-left: 98px;
+
+    font-size: 0.88rem;
+  }
+
+  .table-wrapper tbody td::before {
+    width: 76px;
+
+    font-size: 0.65rem;
+  }
+
+  .table-wrapper tbody th {
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================================
+   TECH DROPDOWN
+   ========================================================= */
+
+.tech-menu {
+  position: relative;
+}
+
+.tech-menu summary {
+  padding: 8px 12px;
+
+  border-radius: 10px;
+
+  color: var(--ink);
+
+  font-weight: 650;
+
+  cursor: pointer;
+  list-style: none;
+}
+
+.tech-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.tech-menu summary::after {
+  content: "⌄";
+
+  margin-left: 8px;
+}
+
+.tech-menu[open] summary {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+.tech-menu-panel {
+  position: absolute;
+
+  z-index: 20;
+
+  top: calc(100% + 8px);
+  left: 0;
+
+  display: grid;
+
+  min-width: 210px;
+
+  padding: 8px;
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow);
+}
+
+.tech-menu-panel a {
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  color: var(--ink);
+
+  text-decoration: none;
+}
+
+.tech-menu-panel a:hover {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+@media (max-width: 640px) {
+
+  .tech-menu-panel {
+    position: static;
+
+    margin: 6px 0 0;
+
+    box-shadow: none;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ==========================================
+   ABOUT E'S NETWORK
+   ========================================== */
+
+.about {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(49, 91, 234, 0.08),
+      transparent 32%
+    ),
+    #f5f7fb;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+  align-items: center;
+  gap: 80px;
+}
+
+.about-content {
+  max-width: 650px;
+}
+
+.about-content h2 {
+  margin: 0 0 22px;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  color: var(--ink);
+}
+
+.about-content .section-intro {
+  max-width: 620px;
+  margin-bottom: 42px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* About points */
+
+.about-points {
+  display: grid;
+  gap: 24px;
+}
+
+.about-point {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.about-number {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #eef3ff;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.about-point h3 {
+  margin: 2px 0 7px;
+  font-size: 1.08rem;
+  color: var(--ink);
+}
+
+.about-point p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+/* Image */
+
+.about-visual {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 34px;
+  background: #101522;
+  box-shadow:
+    0 30px 70px rgba(23, 32, 51, 0.18),
+    0 10px 25px rgba(23, 32, 51, 0.08);
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.about-image-wrapper:hover img {
+  transform: scale(1.045);
+}
+
+/* Dark blue image overlay */
+
+.about-image-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(9, 20, 48, 0.02) 20%,
+      rgba(9, 20, 48, 0.18) 55%,
+      rgba(5, 14, 35, 0.82) 100%
+    );
+  pointer-events: none;
+}
+
+/* Image caption */
+
+.about-image-caption {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 17px;
+  background: rgba(8, 18, 40, 0.62);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #fff;
+}
+
+.caption-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border-radius: 50%;
+  background: #4d7cff;
+  box-shadow: 0 0 18px rgba(77, 124, 255, 0.9);
+}
+
+.about-image-caption strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.about-image-caption small {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.75rem;
+}
+
+/* Floating card */
+
+.about-floating-card {
+  position: absolute;
+  right: -28px;
+  top: 55px;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 16px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 18px 40px rgba(23, 32, 51, 0.15);
+}
+
+.floating-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #315bea,
+    #7656e8
+  );
+
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.tech-naira-icon svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+.about-floating-card strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.about-floating-card span:last-child {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-content {
+    max-width: none;
+  }
+
+  .about-visual {
+    min-height: auto;
+  }
+
+  .about-image-wrapper {
+    height: 480px;
+  }
+
+  .about-floating-card {
+    right: 18px;
+    top: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .about {
+    padding-block: 70px;
+  }
+
+  .about-grid {
+    gap: 38px;
+  }
+
+  .about-content h2 {
+    font-size: clamp(2.5rem, 12vw, 3.6rem);
+  }
+
+  .about-content .section-intro {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-point {
+    grid-template-columns: 44px 1fr;
+    gap: 13px;
+  }
+
+  .about-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+  }
+
+  .about-image-wrapper {
+    height: 420px;
+    border-radius: 25px;
+  }
+
+  .about-image-caption {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .about-floating-card {
+    right: 12px;
+    top: 15px;
+    padding: 12px 14px;
+  }
+
+  .floating-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
