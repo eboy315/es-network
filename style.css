@@ -139,6 +139,11 @@ button {
   gap: 18px;
 }
 
+.ad-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  min-height: 100px;
+}
 
 
 /* Brand */
