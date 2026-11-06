@@ -26,7 +26,7 @@ const phones = [
   { brand: "Samsung", model: "Galaxy A16 LTE", price: 195000, storage: "128GB", ram: "4GB RAM", specs: "Reliable entry tier, Super AMOLED screen, 5000mAh.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZOtUoWiDrWzsvTAHlpdllDeUKC7aV9F5IgDBmshsRAA&s=10" },
 
   { brand: "Samsung", model: "Galaxy F15", price: 205000, storage: "128GB", ram: "6GB RAM", specs: "MediaTek Dimensity 6100+, 6000mAh battery, 90Hz screen.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0uZXw0lZ_GMTO7adVc0NqsNBSBe6j75i87wsRyH3ow&s=10" },
-  
+
   { brand: "Samsung", model: "Galaxy A16 5G", price: 235000, storage: "128GB / 256GB", ram: "4GB / 6GB RAM", specs: "MediaTek Dimensity 6300, 6.7\" Super AMOLED 90Hz, 5000mAh.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEfadqnsapxY-1pzTYPoPg3GsUABRySXjfUeEe898gg&s=10" },
   // Midrange (11-15)
   { brand: "Samsung", model: "Galaxy A17 5G", price: 260000, storage: "128GB", ram: "4GB RAM", specs: "Upgraded mid-tier entry, 90Hz AMOLED, 5000mAh.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6WojgRYBaW1e36QQyIvewHAaKqCwLvxlt0xg4p81Feg&s=10" },
@@ -52,12 +52,19 @@ const phones = [
   
   { brand: "Samsung", model: "Galaxy S26 FE", price: 850000, storage: "128GB / 256GB", ram: "8GB RAM", specs: "Fan Edition flagship entry, high-end processing, 120Hz AMOLED.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFj9AJKaMayJzdiPEnXEywwGOyVgFxwb1-BKl8eTrsmQ&s=10" },
   { brand: "Samsung", model: "Galaxy S24 Ultra", price: 1450000, storage: "256GB / 512GB", ram: "12GB RAM", specs: "Legacy flagship standard, flat display, quad camera zoom.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVO9NA7FO6bV07bXoUYt4LSqN9WMF6RUuw0yMNK9Hs1A&s=10" },
+
   { brand: "Samsung", model: "Galaxy S26", price: 1350000, storage: "256GB / 512GB", ram: "12GB RAM", specs: "Next-gen flagship power, compact Dynamic AMOLED 2X display.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1Y_6VNY8eXwr2jz5pBFDaOQIxkF3AbVfRnOOT3a9jOg&s=10" },
+
   { brand: "Samsung", model: "Galaxy S26+", price: 1550000, storage: "256GB / 512GB", ram: "12GB RAM", specs: "Large screen powerhouse, flagship processor, 4900mAh battery.", image: "https://b2c-contenthub.com/wp-content/uploads/2026/03/Samsung-Galaxy-S26-Plus-Black.jpg?quality=50&strip=all&w=1200" },
+
   { brand: "Samsung", model: "Galaxy Z Flip 7", price: 1650000, storage: "256GB / 512GB", ram: "12GB RAM", specs: "Compact foldable flip phone, extensive cover display, Galaxy AI.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPKptPAPe2BjSPd0o35piEbh7xXXBF2PE5vxDBYjS2RQ&s=10" },
+
   { brand: "Samsung", model: "Galaxy S25 Ultra", price: 1850000, storage: "256GB / 512GB", ram: "12GB RAM", specs: "Snapdragon 8 Elite core, titanium build, phenomenal zoom.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuLapwK-Fpu1-4IIWyxBpUUY52ogFhcw7pFcBMTjK6CQ&s=10" },
+
   { brand: "Samsung", model: "Galaxy S26 Ultra", price: 2150000, storage: "256GB / 512GB / 1TB", ram: "12GB / 16GB RAM", specs: "Top-tier flagship, Privacy Display, 200MP Quad camera layout.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl_K9pPVlAmcXb0QKZ1OdBWkBREG4YaOLtVi6kB0-bcg&s=10" },
+
   { brand: "Samsung", model: "Galaxy Z Fold 7", price: 2350000, storage: "256GB / 512GB", ram: "12GB RAM", specs: "Ultra-thin book-style foldable tablet layout, productivity master.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTnBRIz5f-OtIIrhF0iNCJSUYKm56srhHiIrsCXI7_ig&s=10" },
+
   { brand: "Samsung", model: "Galaxy Z Fold 8", price: 2650000, storage: "256GB / 512GB / 1TB", ram: "12GB / 16GB RAM", specs: "Next-gen heavy duty foldable, advanced hinge architecture.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScHhxzcJeljE3rj3mZiCgGOgeZBjuXmuW2SGqLgshiOA&s=10" },
 
 
@@ -66,22 +73,32 @@ const phones = [
   // ==========================================
   // Budget (1-10)
   { brand: "Apple", model: "iPhone 7", price: 135000, storage: "32GB / 128GB", ram: "2GB RAM", specs: "Apple A10 Fusion chip, aluminum build, single camera.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpKwx2yd-ZRVC_RXI4CyrunEe3JjqbMCpWHI6ln5Fk7A&s=10" },
+
   { brand: "Apple", model: "iPhone 7 Plus", price: 145000, storage: "32GB / 128GB", ram: "3GB RAM", specs: "Dual camera zoom portrait mode, water resistant body.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxGVOtOkirWcHzDPqJuqerZYyO6CBtPSp_CzN2JLehXA&s=10" },
 
   { brand: "Apple", model: "iPhone 8", price: 165000, storage: "64GB", ram: "2GB RAM", specs: "A11 Bionic chip, compact 4.7-inch display, wireless charging.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_U5QUSXL9hDAchh0g_BWxdeUfyqgkmhUEfqDPkLk1_w&s=10" },
 
   { brand: "Apple", model: "iPhone 8 Plus", price: 210000, storage: "64GB / 128GB", ram: "3GB RAM", specs: "Glass back design, dual cameras, physical Home button.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nxJsliYwueF07SpzjAtLConG0Fx81Ltx6w23oac4Xg&s=10" },
+
   { brand: "Apple", model: "iPhone SE (2020)", price: 240000, storage: "64GB / 128GB", ram: "3GB RAM", specs: "Compact form factor, A13 Bionic chip, Touch ID button.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7KoGvlrkYN5yC8hgPOMe74RAIFd3FVsH8YVnjrURZw&s=10" },
+
   { brand: "Apple", model: "iPhone X", price: 290000, storage: "64GB / 256GB", ram: "3GB RAM", specs: "OLED display debut, Face ID, dual 12MP telephoto configuration.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3e4w31hUQqIXimRo2MuCgdOwU9mSG5HO08dmHqzVHSg&s=10" },
+
   { brand: "Apple", model: "iPhone XR", price: 310000, storage: "64GB / 128GB", ram: "3GB RAM", specs: "All-screen LCD layout, Face ID, reliable battery duration.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTApMTtk9-jehFcPvNY90ejgYI7HVPlCKNSbKWw5-wM1g&s=10" },
 
   { brand: "Apple", model: "iPhone SE (2022)", price: 350000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "A15 Bionic chip inside classic compact body layout.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnWpAI-d7BNHAdv3K23cCzrR3q2sIKw_bdIRpGOuRraA&s=10" },
+
   { brand: "Apple", model: "iPhone 11", price: 380000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "A13 Bionic, 6.1\" Liquid Retina display, dual 12MP cameras.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgbIB1MrlqZPxXQDT1GRlyMDKRnNx0KEQybyp4H_Y7jA&s=10" },
+
   { brand: "Apple", model: "iPhone 12 mini", price: 420000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "Compact OLED screen, A14 Bionic processor, 5G cellular support.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtwdZnUzODcnczFtN9S-gS8cSVkA69UGlXSyRX0cp1eg&s=10" },
+
   // Midrange (11-15)
   { brand: "Apple", model: "iPhone 11 Pro", price: 490000, storage: "64GB / 256GB", ram: "4GB RAM", specs: "Triple camera system, stainless steel frame, OLED display.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlv3sAWXId0v7qQbt926Bd43UFMI4SuoPVH_Rf2o_XNg&s=10" },
+
   { brand: "Apple", model: "iPhone 13 mini", price: 540000, storage: "128GB / 256GB", ram: "4GB RAM", specs: "Pocket-friendly size, improved battery over 12 mini, A15 Bionic.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8xacQPF6F7qxYLkOpq2EooazNlpRPoLa67fvkjrmK_A&s=10" },
+
   { brand: "Apple", model: "iPhone 12", price: 580000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "A14 Bionic chip, flat-edge design, Super Retina XDR OLED.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo5q9v2dDhyueUw0skXyybCDRoSnYHYUMOTVOqOQJyeA&s=10" },
+
   { brand: "Apple", model: "iPhone 12 Pro Max", price: 690000, storage: "128GB / 256GB", ram: "6GB RAM", specs: "Large screen display, sensor-shift stabilization, premium finish.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwe4xF6mJ9oJlX51c7lkErCypg5wcvcYMhDC5QVB0pmw&s=10" },
   
 
@@ -94,13 +111,19 @@ const phones = [
   { brand: "Apple", model: "iPhone 14", price: 900000, storage: "128GB / 256GB", ram: "6GB RAM", specs: "A15 Bionic, 6.1\" Super Retina XDR Display, dual 12MP cameras.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR-Tz5OohMpbO8Dn8PLIif5j616ZI2AS3ZVBwaPMv_Xg&s=10" },
 
   { brand: "Apple", model: "iPhone 15", price: 1100000, storage: "128GB / 256GB", ram: "6GB RAM", specs: "USB Type-C port, Dynamic Island layout, 48MP main sensor.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE-Mh3P-wNnzqb-OlKYTvN-XkLB10Hoa-kJHwI2YV7Xg&s=10" },
+
   { brand: "Apple", model: "iPhone 16", price: 1350000, storage: "128GB / 256GB / 512GB", ram: "8GB RAM", specs: "Apple A18 Chip, 6.1\" Super Retina XDR OLED, Dynamic Island.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHyevBXtUoGDd2qMeeMBPVomfKC6vtWmif5BOVUMNi8A&s=10" },
+
   { brand: "Apple", model: "iPhone 17", price: 1380000, storage: "128GB / 256GB / 512GB", ram: "8GB RAM", specs: "Apple A19 Chip, 6.1\" OLED, ProMotion 120Hz display.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2avQl7qZx02KkfZPdyvJjwdbue5KhXznqFsu7L4RdXQ&s=10" },
+
   { brand: "Apple", model: "iPhone 17 Plus", price: 1550000, storage: "256GB / 512GB", ram: "8GB RAM", specs: "Apple A19 Chip, 6.7\" Super Retina XDR display, dual 48MP.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2R7s3CeH_ZTbap2WxMw6tPKv0Arry06qljSu1brgViQ&s=10" },
+
   { brand: "Apple", model: "iPhone 16 Pro", price: 1650000, storage: "128GB / 256GB / 512GB", ram: "8GB RAM", specs: "A18 Pro Chip, 6.3\" Super Retina XDR, Camera Control button.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFJHIj-3lr8pb7QgzVgx7dNYueiFSTPWrtMYKXC8dRuA&s=10" },
+
   { brand: "Apple", model: "iPhone 15 Pro Max", price: 1650000, storage: "256GB / 512GB", ram: "8GB RAM", specs: "Titanium build, A17 Pro chip, 5x optical telephoto lens.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw1wtnOGE2JFOTvRloNoyucZFbs4lcdmLhgsKwUhtoLw&s=10" },
 
   { brand: "Apple", model: "iPhone 17 Pro", price: 1700000, storage: "256GB / 512GB", ram: "12GB RAM", specs: "Apple A19 Pro Chip, 6.3\" Super Retina XDR, 120Hz ProMotion.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMKrgVNrh6dG2Sreo_igqx0iVyZLsNazOIQb3DBOI7Yw&s=10" },
+
   { brand: "Apple", model: "iPhone 16 Pro Max", price: 2150000, storage: "256GB / 512GB / 1TB", ram: "8GB RAM", specs: "A18 Pro Chip, 6.9\" Super Retina XDR, 48MP Fusion Camera.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_wwWKpBM3Ax0c3NoKT89PmLQyxN30QVA3LLEjHrRSQ&s=10" },
 
   // ==========================================
@@ -108,14 +131,23 @@ const phones = [
   // ==========================================
   // Budget (1-10)
   { brand: "Google", model: "Pixel 2 XL", price: 120000, storage: "64GB", ram: "4GB RAM", specs: "Snapdragon 835, squeeze for Google Assistant feature.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNTrrElFqYmpvpSngU5E3UTLIOP--zmjyvOSfBIpO2Ag&s=10" },
+
   { brand: "Google", model: "Pixel 3", price: 160000, storage: "64GB", ram: "4GB RAM", specs: "Dual front selfie cameras, flagship glass back build architecture.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmfGGr5yaY9LlSK4Rth2eYOd9wu3K-OIrjyeiEpkCRdg&s=10" },
+
   { brand: "Google", model: "Pixel 3a", price: 180000, storage: "64GB", ram: "4GB RAM", specs: "Classic headphone jack, phenomenal single camera performance.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbE-0F7LVHH-77XQEm1I6dvPOf0Dw79TPwD3l6OUVilQ&s=10" },
+
   { brand: "Google", model: "Pixel 3 XL", price: 195000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "Notch display layout, stereo speakers, unlimited original photo backup.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVV6EOJmXJEQkf-7IljX5cUF-IcdrdQxUU6BsjvnMcQg&s=10" },
+
   { brand: "Google", model: "Pixel 4a", price: 250000, storage: "128GB", ram: "6GB RAM", specs: "Snapdragon 730G, 5.81\" OLED display, lightweight compact design.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtQo6-qPmvpJsbXHNgBKZBwvYBAc_cmgdWuZE4_5KL5Q&s=10" },
+
   { brand: "Google", model: "Pixel 4", price: 280000, storage: "64GB / 128GB", ram: "6GB RAM", specs: "Snapdragon 855, Motion Sense radar features, 90Hz display.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6rCUBaz1rVnpkHQWmo-WcoQ34DtU1brAhFsyPbTNd9w&s=10" },
+
   { brand: "Google", model: "Pixel 4a 5G", price: 290000, storage: "128GB", ram: "6GB RAM", specs: "Snapdragon 765G, larger 6.2\" OLED screen, ultra-wide lens added.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtfMabwY-fggj9GdkcFpcnnp29aw_1xvACBbYgj1ZPvA&s=10" },
+
   { brand: "Google", model: "Pixel 5", price: 380000, storage: "128GB", ram: "8GB RAM", specs: "Snapdragon 765G, aluminum unibody build, wireless charging.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtz0-EgeKKuK0k1mF8kh5aZ_D0QclXu914-k2gSrnH7g&s=10" },
+
   { brand: "Google", model: "Pixel 5a 5G", price: 420000, storage: "128GB", ram: "6GB RAM", specs: "IP67 water resistance, larger 4680mAh battery capacity.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQnU2GKjCZvhAQRY0YnJzR04mL6ziff0KUzkfU-uK6g&s=10" },
+  
   { brand: "Google", model: "Pixel 6a (Refurbished)", price: 450000, storage: "128GB", ram: "6GB RAM", specs: "Google Tensor G1 chip, custom security core, clean software.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQseOEMlZCPqkNbgr4VpX-btHP7EIDxcYxCo5otBlVz2A&s=10" },
   // Midrange (11-15)
   { brand: "Google", model: "Pixel 7a", price: 520000, storage: "128GB", ram: "8GB RAM", specs: "Google Tensor G2, 6.1\" OLED 90Hz, 64MP Main Camera.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsrwEY2KQtfjdHVAePoHN8akt9rgsaHjw_WpNSTw0uxw&s=10" },
@@ -343,6 +375,7 @@ const phones = [
   { brand: "Realme", model: "Realme C55", price: 168000, storage: "128GB / 256GB", ram: "6GB / 8GB RAM", specs: "Mini capsule notification feature, Helio G88, 64MP camera.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJNoCWlHsCJqclDVC99TTAGjQ_lNZNXrJppsNmhuRYg&s=10" },
   { brand: "Realme", model: "Realme C65", price: 175000, storage: "128GB / 256GB", ram: "6GB / 8GB RAM", specs: "Helio G85, 6.67\" 90Hz, 50MP AI camera, 45W fast charge.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJNoCWlHsCJqclDVC99TTAGjQ_lNZNXrJppsNmhuRYg&s=10" },
   { brand: "Realme", model: "Realme C75", price: 240000, storage: "128GB / 256GB", ram: "8GB RAM", specs: "Helio G92 Max, military drop resistance, IP69 water rating.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJNoCWlHsCJqclDVC99TTAGjQ_lNZNXrJppsNmhuRYg&s=10" },
+
   // Midrange (11-15)
   { brand: "Realme", model: "Realme 11 5G", price: 310000, storage: "256GB", ram: "8GB RAM", specs: "Dimensity 6100+, 108MP camera, 67W SUPERVOOC charging.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJNoCWlHsCJqclDVC99TTAGjQ_lNZNXrJppsNmhuRYg&s=10" },
   { brand: "Realme", model: "Realme 12 5G", price: 345000, storage: "256GB", ram: "8GB RAM", specs: "Dimensity 6100+, watch-inspired luxury camera module ring.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCJNoCWlHsCJqclDVC99TTAGjQ_lNZNXrJppsNmhuRYg&s=10" },
