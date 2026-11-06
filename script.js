@@ -10,14 +10,23 @@ const phones = [
   // ==========================================
   // Budget (1-10)
   { brand: "Samsung", model: "Galaxy A05", price: 125000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "MediaTek Helio G85, 6.7\" display, 5000mAh battery.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNI1Imx4a3kuE05hNduY4vA94vzfyEOfZNteT9Ol8Pzg&s=10" },
+
   { brand: "Samsung", model: "Galaxy A06", price: 135000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "Budget entry, MediaTek Helio G85, 5000mAh Battery.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0ULQeCN3bYKLxYDACnZ0C27_rgnTf1xot25ABhUCPw&s=10" },
+
   { brand: "Samsung", model: "Galaxy A07", price: 150000, storage: "64GB / 128GB", ram: "4GB RAM", specs: "Affordable daily driver, 6.7\" display, 5000mAh battery.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwMX9I9Wz4BT2ZO0R_4Xkpobt6UdglXmIPblBT7doaiQ&s=10" },
+
   { brand: "Samsung", model: "Galaxy A14", price: 140000, storage: "64GB", ram: "4GB RAM", specs: "FHD+ Display, 50MP triple camera setup, 5000mAh battery.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFdpDFwni_kE6Nv4Nwdw5udLor8BePa7XVRQIwHwPEgw&s" },
+
   { brand: "Samsung", model: "Galaxy A05s", price: 150000, storage: "128GB", ram: "4GB RAM", specs: "Snapdragon 680, 6.7\" 90Hz display, 5000mAh battery.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE_jZjdVlZb7fwpsTVs-vl65pH2sZF2hf-q88WLeB3iw&s=10" },
+
   { brand: "Samsung", model: "Galaxy A15", price: 185000, storage: "128GB", ram: "4GB / 6GB RAM", specs: "Super AMOLED 90Hz display, 50MP camera, 5000mAh.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_qe3lB4pB4RDsie24QpbSjVikD2FZnmJEBU415f145g&s=10" },
+
   { brand: "Samsung", model: "Galaxy M15", price: 195000, storage: "128GB", ram: "4GB RAM", specs: "Massive 6000mAh battery, Super AMOLED 90Hz screen.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdy26G-Rbc5C-CP2n24hEPG5O9wH8fJzjrpwLdsnkDlA&s=10" },
+
   { brand: "Samsung", model: "Galaxy A16 LTE", price: 195000, storage: "128GB", ram: "4GB RAM", specs: "Reliable entry tier, Super AMOLED screen, 5000mAh.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZOtUoWiDrWzsvTAHlpdllDeUKC7aV9F5IgDBmshsRAA&s=10" },
+
   { brand: "Samsung", model: "Galaxy F15", price: 205000, storage: "128GB", ram: "6GB RAM", specs: "MediaTek Dimensity 6100+, 6000mAh battery, 90Hz screen.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0uZXw0lZ_GMTO7adVc0NqsNBSBe6j75i87wsRyH3ow&s=10" },
+  
   { brand: "Samsung", model: "Galaxy A16 5G", price: 235000, storage: "128GB / 256GB", ram: "4GB / 6GB RAM", specs: "MediaTek Dimensity 6300, 6.7\" Super AMOLED 90Hz, 5000mAh.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEfadqnsapxY-1pzTYPoPg3GsUABRySXjfUeEe898gg&s=10" },
   // Midrange (11-15)
   { brand: "Samsung", model: "Galaxy A17 5G", price: 260000, storage: "128GB", ram: "4GB RAM", specs: "Upgraded mid-tier entry, 90Hz AMOLED, 5000mAh.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6WojgRYBaW1e36QQyIvewHAaKqCwLvxlt0xg4p81Feg&s=10" },
